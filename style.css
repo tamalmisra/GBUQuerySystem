@@ -55,11 +55,11 @@ body {
     letter-spacing: 1.5;
 }
 
-/* .header-desc {
+.header-desc {
     font-size: 14px;
     letter-spacing: 1;
     text-align: center;
-} */
+}
 
 .search {
     width: 60%;
