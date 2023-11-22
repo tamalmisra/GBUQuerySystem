@@ -1,0 +1,403 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- top icon  -->
+    <link rel="icon" type="image/logo_gbu.png" href="https://www.gbu.ac.in/Content/img/logo_gbu.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>GBU - FAQ</title>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="header-title">FAQ</h1>
+        <p class="header-desc">Frequently Asked Questions</p>
+
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+
+        <div
+        class="suggestion-parent"
+        >
+            <div class="search-suggestions" id="search-suggestions">
+                <!-- Suggested questions will be displayed here -->
+            </div>
+        </div>
+     
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-question"></h2>
+                <p id="modal-answer"></p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="faq">
+        <nav class="navmenu">
+            <ul>
+                <li><a class="faq-li active" onclick="showContent('about')">ABOUT</a></li>
+                <li><a class="faq-li" onclick="showContent('admission')">ADMISSION</a></li>
+                <li><a class="faq-li" onclick="showContent('schools')">SCHOOLS</a></li>
+                <li><a class="faq-li" onclick="showContent('students-teachers')">STUDENT 'N' TEACHERS</a></li>
+                <li><a class="faq-li" onclick="showContent('placement')">PLACEMENT</a></li>
+                <li><a class="faq-li" onclick="showContent('clubs-events')">CLUBS 'N' EVENTS</a></li>
+                <li><a class="faq-li" onclick="showContent('hostel')">HOSTEL</a></li>
+            </ul>
+        </nav>
+        <div id="about" class="faq-box active">
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-1">
+                <label class="faq-title" for="faq-trigger-1">Is GBU a deemed university?</label>
+                <div class="faq-detail">
+                    <p>Gautam Buddha University is a state university established by the Uttar Pradesh Government under
+                        the Gautam Buddha University Act of 2002.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-2">
+                <label class="faq-title" for="faq-trigger-2">Is GBU NAAC accredited?</label>
+                <div class="faq-detail">
+                    <p>Yes, GBU is recognized under UGC Section 12B and NAAC accredited with B+ Grade.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-3">
+                <label class="faq-title" for="faq-trigger-3">What is the rank of GBU in NIRF?</label>
+                <div class="faq-detail">
+                    <p>GBU is at 99th position in NIRF ranking.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-4">
+                <label class="faq-title" for="faq-trigger-4">How big is the GBU campus?</label>
+                <div class="faq-detail">
+                    <p>It is 511 acres lush green campus.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-5">
+                <label class="faq-title" for="faq-trigger-5">Who built Gautam Buddha University?</label>
+                <div class="faq-detail">
+                    <p>Gautam Buddha University was the dream project of former chief minister of Uttar Pradesh, Ms.
+                        Mayawati. The university was established by the Uttar Pradesh Government under the Gautam Buddha
+                        University Act of 2002 and began its first academic session in 2008.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-6">
+                <label class="faq-title" for="faq-trigger-6">Who approved Gautam Buddha University?</label>
+                <div class="faq-detail">
+                    <p>Recognition by the University Grants Commission of India (UGC): Gautam Buddha University is
+                        recognized by the University Grants Commission of India vide F. 9-18/2009 (CRP-I) dated 13 May
+                        2009 under section 2(f) of UGC Act 1956.</p>
+                </div>
+            </div>
+        </div>
+        <div id="admission" class="faq-box">
+            <!-- Admission  -->
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-7">
+                <label class="faq-title" for="faq-trigger-7">What is the percentage required for Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>Eligibility 10+2 with Mathematics securing minimum 50% marks (45% for SC/ST) or equivalent grade.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-8">
+                <label class="faq-title" for="faq-trigger-8">Can I get direct admission in GBU?</label>
+                <div class="faq-detail">
+                    <p>Admission in Gautam Buddha University is either through entrance examination or by direct mode.
+                        For admission in Engineering, you need to write GPTU while for seeking admission in Professional
+                        courses or Ph. D you'll have to write GPTR.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-9">
+                <label class="faq-title" for="faq-trigger-9">Can foreign students also seek admission in GBU?</label>
+                <div class="faq-detail">
+                    <p>Yes, the University has made its presence globally and is open for admission in all UG, PG and
+                        doctoral programmes for foreign students. Some of the countries from where the students have
+                        taken admission since GBU’s inception are: Vietnam, Cambodia, Afghanistan, South Korea,
+                        Thailand, USA, etc.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-10">
+                <label class="faq-title" for="faq-trigger-10">Is there any negative marking in GBU entrance
+                    exam?</label>
+                <div class="faq-detail">
+                    <p>No, there is no negative markings in the entrance exam at GBU.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-11">
+                <label class="faq-title" for="faq-trigger-11">Is the entrance exam of GBU hard?</label>
+                <div class="faq-detail">
+                    <p>No, GBU entrance exam is completely based on the basics of class 12, it is not so much hard. It
+                        depends on your capabilities how you take difficulties. Not at all hard. If u have a basic
+                        knowledge (only NCERT) what was taught you in 11th and 12th then also you can clear the entrance
+                        exam.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-12">
+                <label class="faq-title" for="faq-trigger-12">How can I check my GBU entrance result?</label>
+                <div class="faq-detail">
+                    <p>Applicants just go by the given steps to check their Result 2023: Visit the official website
+                        link. Then, hit the Result link. Check your exam & click on that link.</p>
+                </div>
+            </div>
+        </div>
+        <div id="schools" class="faq-box">
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-13">
+                <label class="faq-title" for="faq-trigger-13">What is the curriculum of studies in all schools
+                    under Gautam Buddha University?</label>
+                <div class="faq-detail">
+                    <p>The study curriculum can be seen in the Gautam Buddha University Time Table Application available
+                        on the Play Store for each and every course that comes under the schools of Gautam Buddha
+                        University.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-14">
+                <label class="faq-title" for="faq-trigger-14">What are the facilities provided on Gautam Buddha
+                    University’s School premises?</label>
+                <div class="faq-detail">
+                    <p>The schools provide well atmosphere for study. Other facilities include air-conditioned
+                        classrooms, friendly teacher-student environment, a well-maintained library and 24x7 study
+                        centre is also available to study at any time.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-15">
+                <label class="faq-title" for="faq-trigger-15">What is the timing of classes in the morning?</label>
+                <div class="faq-detail">
+                    <p>The classes are from 9 am to 5 pm roughly. All other changes are done according to the timetable
+                        provided by each and every school.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-16">
+                <label class="faq-title" for="faq-trigger-16">Lab conditions of Gautam Buddha University?</label>
+                <div class="faq-detail">
+                    <p>The labs of GBU are well maintained all across campus. The labs in ICT contain well-maintained
+                        systems and required material according to practical needs to be performed. The labs in the
+                        Biotechnology department also are well-equipped with all the essential equipment required for
+                        practical. The same goes for all the other department labs in all the schools.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-17">
+                <label class="faq-title" for="faq-trigger-17">Name of all schools present at Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>University School of Management, University School of Biotechnology, University School of
+                        Information & Communications Technology, University School of Engineering, University School of
+                        Humanities & Social Sciences, University School of Vocational Studies & Applied Sciences,
+                        University School of Law Justice & Governance and University School of Buddhist Studies &
+                        Civilizations.</p>
+                </div>
+            </div>
+        </div>
+        <div id="students-teachers" class="faq-box">
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-18">
+                <label class="faq-title" for="faq-trigger-18">Availibilty of teachers and staffs</label>
+                <div class="faq-detail">
+                    <p>Assistant Professor, Guest Faculty, Reasearch Associate, Guest Faculty Lecturer, Technical
+                        Assistant, Lab Technician, Office Assistant, PHD Research Scholar, Lab Assistant, Research
+                        Scholar, Lecturer, Guest Lecturer, Assistant professor and Guest Facult, POst DOC fellow.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-19">
+                <label class="faq-title" for="faq-trigger-19">Is Gautam Buddha University good or bad?</label>
+                <div class="faq-detail">
+                    <p>Gautam Buddha University has an overall rating of 3.5 out of 5, based on over 28 reviews left
+                        anonymously by employees.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-20">
+                <label class="faq-title" for="faq-trigger-20">How do I get scholarships at Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>At GBU the scholarships are only provided through the Uttar Pradesh government scholarship
+                        scheme. A form is announced by govt and students with a domicile in the same state can apply for
+                        a scholarship. The scholarship is somewhere between 50k to 70k. Also university provides fee
+                        concessions (approximately half of the fee is removed i.e. 50% concession) for Scheduled Cast
+                        and Scheduled Tribes categories. They must provide their caste certificate for the above
+                        privileges. Secondly, the branch toppers are awarded with a cash prize for their remarkable
+                        performance throughout the year. The cash prize awarded is around 10k.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-21">
+                <label class="faq-title" for="faq-trigger-21">What are the admission criteria of Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>Admissions to the university is through the entrance exam conducted by the university itself the
+                        Gautam Buddha University Entrance Test (GBU-ET). Applicants must register for this exam online.
+                        If seats are available after GBU-ET, then the university might consider national-level test
+                        scores like JEE Main, GATE, CLAT, etc.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-22">
+                <label class="faq-title" for="faq-trigger-22">Is Gautam Buddha University a ragging-free campus or
+                    not?</label>
+                <div class="faq-detail">
+                    <p>Yes GBU is a ragging-free campus. Seniors are very friendly and will go to any extent to help you
+                        out if there is a problem. In addition to this, GBU has some very strict guidelines when it
+                        comes to ragging which also acts as a deterrence. Also if any such activity occurs on university
+                        premises then the matter is looked after by the Anti-Ragging Committee-GBU.</p>
+                </div>
+            </div>
+        </div>
+        <div id="placement" class="faq-box">
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-23">
+                <label class="faq-title" for="faq-trigger-23">How many companies visit during Gautam Buddha University
+                    placements?</label>
+                <div class="faq-detail">
+                    <p>More than 50 companies visited the campus during Gautam Buddha University placements 2023.
+                        Further, a fluctuating trend was witnessed in the number of companies visited during Gautam
+                        Buddha University placements over the past three years. </p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-24">
+                <label class="faq-title" for="faq-trigger-24">Is GBU good for placement?</label>
+                <div class="faq-detail">
+                    <p>Placement is Average. If you have proper skills, you could get placed. Many students have been
+                        placed. This college has its own placement cell which contact companies for internship
+                        opportunities and placement.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-25">
+                <label class="faq-title" for="faq-trigger-25">What are the placement results at Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                        <p>The highest and the average package offered during Gautam Buddha University placements in 2023
+                            stood at INR 24 LPA and INR 4.5 LPA, respectively.</p>
+                </div>
+            </div>
+        </div>
+        <div id="clubs-events" class="faq-box">
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-26">
+                <label class="faq-title" for="faq-trigger-26">What are the cultural events of Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>Gautam Buddha University’s annual cultural event is Abhivyanjana. Abhivyanjana intends to add
+                        wings to the intellect, imagination and creativity of our students. Every year, students from
+                        Gautam Buddha University get together to celebrate the spirit of life
+                        by participating in various cultural, technical and social events in various dimensions of
+                        performing arts and visual arts. Abhivyanjana aims to dissolve cultural demarcations and help
+                        facilitate a new school of thought where every student thinks beyond boundaries but is still
+                        grounded in his/her values. It intends to add wings to the intellect, imagination and creativity
+                        of students. The Cultural Fest is packed with various cultural and technical events ranging from
+                        debate, photography, music, dance, poetry, storytelling, robotics, painting, poster making,
+                        programming, and Ad-mad to name a few.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-27">
+                <label class="faq-title" for="faq-trigger-27">Cultural clubs present in Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>The cultural council of the University consists of thirteen clubs: Dramatics Club (Dishayan),
+                        Music Club(Swaranjali), Dance Club, Debating Society (Drishtikon) , Photography Club(Pratibimb),
+                        Audio Visual Education Club (Pradarsh), Adventure Club, Art Club (Chitrakala), Literary Club,
+                        Natures Club, Techno-Cultural Club, Social Service Club and Creativity Club.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-28">
+                <label class="faq-title" for="faq-trigger-28">Sports events held in Gautam Buddha University?</label>
+                <div class="faq-detail">
+                    <p>The main sports events in Gautam Buddha University are Branch Premier League, Gautam Buddha
+                        University Cricket League, Sarvepalli Radhakrishnan tournament, Inter-school cricket league,
+                        Basketball tournaments, Badminton leagues and Shauryotsav – university’s biggest sports
+                        festival.</p>
+                </div>
+            </div>
+        </div>
+        <div id="hostel" class="faq-box">
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-29">
+                <label class="faq-title" for="faq-trigger-29">Can we go outside from college hostel?</label>
+                <div class="faq-detail">
+                    <p>Without permission of Parent's and warden the resident cannot stay outside. No student shall
+                        leave the hostel without prior permission of the hostel warden.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-30">
+                <label class="faq-title" for="faq-trigger-30">Can I take my phone in hostel?</label>
+                <div class="faq-detail">
+                    <p>Yes, mobile phones are allowed in hostels.</p>
+                </div>
+            </div>
+
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-31">
+                <label class="faq-title" for="faq-trigger-31">Do hostel rooms have bathrooms?</label>
+                <div class="faq-detail">
+                    <p>Most hostels have a communal bathroom with private shower stalls. So while they're technically
+                        “communal”, you'll still have a sense of privacy.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-32">
+                <label class="faq-title" for="faq-trigger-32">Is WIFI available in GBU hostel?</label>
+                <div class="faq-detail">
+                    <p>Yes, LANs connectivity in each and every hostel .The network have 10/100/1000 Mbps transmission
+                        capacity and are linked through fiber optic cables.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-33">
+                <label class="faq-title" for="faq-trigger-33">What are the hostel facilities in Gautam Buddha
+                    University?</label>
+                <div class="faq-detail">
+                    <p>The hostels are equipped with facilities like internet, common rooms, separate TV, visitor's
+                        rooms, table tennis court, reading rooms, first aid facility, indoor games facility, gymnasium,
+                        badminton court and many other facilities.</p>
+                </div>
+            </div>
+            <div class="faq-wrapper">
+                <input type="checkbox" class="faq-trigger" id="faq-trigger-34">
+                <label class="faq-title" for="faq-trigger-34">Is hostel compulsory in GBU 2023?</label>
+                <div class="faq-detail">
+                    <p>Yes, the hostels are compulsory but you won't have much problem as they are single-occupancy
+                        based.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
